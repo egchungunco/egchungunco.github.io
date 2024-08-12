@@ -1,0 +1,58 @@
+* {
+  color: hotpink;
+}
+/* this is a universal selector */
+
+h1 {
+  color: limegreen;
+}
+
+p,
+h3 {
+  color: yellow;
+}
+
+p {
+  color: magenta;
+}
+
+article {
+  text-align: center;
+  border: 1 px dashed lime;
+}
+
+.my-class {
+  color: blueviolet;
+  font-family: "Gupter", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p > strong {
+  color: black;
+}
+
+span {
+  display: block;
+}
+
+p {
+  color: magenta;
+  border: 1px solid red;
+  padding: 10px;
+  background-color: #d40000;
+}
+
+article {
+  text-align: center;
+  border: 1px dashed lime;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+}

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gupter", Times, serif;
+}
+
+body {
+  background-color: #262d38;
+}
+
+.container {
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.spacing {
+  padding-bottom: 20px;
+}
+
+.border {
+  border-style: solid;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 10px;
+  background-color: #f8cd02;
+  padding: 10px;
+}
+
+.grid-container > article {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+p {
+  line-height: 1.5;
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Added Gupter as font family -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Ethan's Media Player Website</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+      <ul>
+        <li onclick="album1()"><a href="#">Music Album 1</a></li>
+        <li onclick="album2()"><a href="#">Music Album 2</a></li>
+        <li onclick="album3()"><a href="#">Music Album 3</a></li>
+        <li onclick="album4()"><a href="#">Music Album 4</a></li>
+        <!-- Add or remove navigation items as needed -->
+      </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main class="container">
+      <!-- Image -->
+      <img
+        id="musicImage"
+        src="https://resources.tidal.com/images/58cb2c48/ea88/4ffe/9847/822e0e4017e4/750x750.jpg"
+      />
+      <!-- Media Player Section -->
+      <div class="media-player">
+        <video id="custom-video-player" controls>
+          <source
+            src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Dry-Down-feat-Ben-Snaath.mp3"
+            type="video/mp4"
+          />
+        </video>
+        <div class="progress-bar">
+          <span id="progress-bar-fill"></span>
+        </div>
+        <div class="custom-controls">
+          <button id="play-pause-btn" onclick="togglePlayPause()">
+            <img
+              id="play-pause-img"
+              src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
+              alt="Play Button"
+              width="24"
+              height="24"
+            />
+          </button>
+
+          <!-- add the missing buttons or functionality here -->
+
+          <!--mute/unmute btn-->
+          <button id="mute-audio-btn" onclick="muteAudio()">
+            <img
+              id="mute-audio-img"
+              src="https://img.icons8.com/?size=100&id=reqgj3e1uKBy&format=png&color=000000"
+              alt="Audio"
+              width="24"
+              height="24"
+            />
+          </button>
+
+          <!--repeat btn-->
+          <button id="repeat-btn" onclick="repeatVideo()">
+            <img
+              id="repeat-img"
+              src="https://img.icons8.com/?size=100&id=91644&format=png&color=000000"
+              alt="Repeat"
+              width="24"
+              height="24"
+            />
+          </button>
+
+          <!--rewind btn-->
+          <button id="rewind-btn" onclick="rewindVideo()">
+            <img
+              id="rewind-img"
+              src="https://img.icons8.com/?size=100&id=91480&format=png&color=000000"
+              alt="Rewind"
+              width="24"
+              height="24"
+            />
+          </button>
+
+          <!--fastforward btn-->
+          <button id="fast-forward-btn" onclick="fastforwardVideo()">
+            <img
+              id="fast-forward-img"
+              src="https://img.icons8.com/?size=100&id=91476&format=png&color=000000"
+              alt="Fastforward"
+              width="24"
+              height="24"
+            />
+          </button>
+        </div>
+      </div>
+
+      <!-- Additional Content Section -->
+      <section>
+        <h2>ONLINE MEDIA PLAYER</h2>
+        <p>This is where you can play the selected songs from the internet!</p>
+        <!-- Add more content as needed -->
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
+      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
+      <a href="https://icons8.com">Icons8</a> <br />
+      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
+      <a href="https://icons8.com">Icons8</a> <br />
+      <a href="https://icons8.com/icon/reqgj3e1uKBy/audio">Audio</a> icon by
+      <a href="https://icons8.com">Icons8</a> <br />
+      <a href="https://icons8.com/icon/91635/no-audio">No Audio</a> icon by
+      <a href="https://icons8.com">Icons8</a> <br />
+      <a href="https://icons8.com/icon/91644/replay">Replay</a> icon by
+      <a href="https://icons8.com">Icons8</a> <br />
+      <a href="https://icons8.com/icon/91480/rewind">Rewind</a> icon by
+      <a href="https://icons8.com">Icons8</a> <br />
+      <a href="https://icons8.com/icon/91476/fast-forward">Fast Forward</a> icon
+      by <a href="https://icons8.com">Icons8</a> <br />
+    </footer>
+  </body>
+</html>

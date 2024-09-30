@@ -21,7 +21,7 @@ function updateProgressBar() {
   const value = (video.currentTime / video.duration) * 100;
   progressBar.style.width = value + "%";
 }
-// Add other functionalities here
+// Added the button functions that control how the webage is used. The lines of code in album1-album4 are meant to allow the user to navigate through the different pages that hold different pieces of music and display images. The lines of code regarding the mute/unmute button are what define the functions of the mute and unmute
 function album1() {
   img.src =
     "https://resources.tidal.com/images/58cb2c48/ea88/4ffe/9847/822e0e4017e4/750x750.jpg";

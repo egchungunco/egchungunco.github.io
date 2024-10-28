@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* Here I chose for the main page colour to be a warm white to show that there is something more hiding behind the exhibits and to draw all the attention to the work rather than other things int he backgorund. */
 body {
   font-family: "Crimson Text", serif;
   background-color: #f5f5f0;
@@ -33,6 +34,7 @@ h1 {
   gap: 2rem;
 }
 
+/* I had the exhibit tiles themselves coloured full white and added the shadown so that there would be some form of distinction and so that I would not need to add an outline around the tiles to give it a cleaner and more refined look. */
 .exhibit {
   background-color: white;
   border-radius: 0.5rem;
@@ -72,6 +74,7 @@ h1 {
   font-style: italic;
 }
 
+/* Here is the styling for the hover overlay. I made it darker when hovered over to indicate that there is something to be displayed when pressed on. */
 .hover-overlay {
   position: absolute;
   inset: 0;
@@ -95,7 +98,7 @@ h1 {
   opacity: 1;
 }
 
-/* Modal Styles */
+/* Here is the styling for the modal display windows in the site. */
 .modal {
   display: none;
   position: fixed;
@@ -186,30 +189,4 @@ h1 {
   font-style: italic;
   border-top: 1px solid #e0e0e0;
   padding-top: 1rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .museum-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .modal-content {
-    padding: 2rem;
-    margin: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .museum-grid {
-    grid-template-columns: 1fr;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .modal-content {
-    padding: 1.5rem;
-  }
 }

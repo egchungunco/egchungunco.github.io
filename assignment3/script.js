@@ -7,7 +7,7 @@ const modalLocation = document.getElementById("modalLocation");
 const closeButton = document.querySelector(".close-button");
 const exhibits = document.querySelectorAll(".exhibit");
 
-// Exhibit data with real historical artifacts
+// In here are basic descriptions of each of the works displayed including where they are currently located as well as when these works were created by their creators.
 const exhibitData = {
   A: {
     title: "The Rosetta Stone",
@@ -105,14 +105,6 @@ exhibits.forEach((exhibit) => {
     const exhibitId = exhibit.dataset.id;
     openModal(exhibitId);
   });
-
-  // Add hover effect sound (optional)
-  exhibit.addEventListener("mouseenter", () => {
-    // Uncomment the following lines if you want hover sound
-    // const hoverSound = new Audio('hover-sound.mp3');
-    // hoverSound.volume = 0.1;
-    // hoverSound.play();
-  });
 });
 
 closeButton.addEventListener("click", closeModal);
@@ -123,37 +115,21 @@ modal.addEventListener("click", (e) => {
   }
 });
 
-// Keyboard Navigation
+// This section is for the viewer to use the keyboard to navigate through different parts of the exhibit.
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal.classList.contains("active")) {
     closeModal();
   }
 });
 
-// Prevent scrolling when modal is open
-modal.addEventListener("wheel", (e) => {
-  if (modal.classList.contains("active")) {
-    e.preventDefault();
-  }
-});
-
-// Add touch support for mobile devices
-let touchStartY;
-
-modal.addEventListener("touchstart", (e) => {
-  touchStartY = e.touches[0].clientY;
-});
-
-modal.addEventListener("touchmove", (e) => {
-  if (!modal.classList.contains("active")) return;
-
-  const touchEndY = e.touches[0].clientY;
-  const diff = touchStartY - touchEndY;
-
-  // If user swipes down more than 100px, close the modal
-  if (diff < -100) {
-    closeModal();
-  }
-
-  e.preventDefault();
-});
+const exhibitImages = {
+  A: "rosetta-stone.jpg",
+  B: "mona_lisa.jpg",
+  C: "starry-night.jpg",
+  D: "tutankhamun-mask.jpg",
+  E: "terracotta-army.jpg",
+  F: "parthenon-marbles.jpg",
+  G: "dead-sea-scrolls.jpg",
+  H: "crown-jewels.jpg",
+  I: "venus-de-milo.jpg",
+};

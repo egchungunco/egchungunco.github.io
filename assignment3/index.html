@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Virtual Gallery</h1>
+
+      <div class="museum-grid">
+        <!-- Ancient History -->
+        <div class="exhibit" data-id="A">
+          <div class="exhibit-content">
+            <h3>Exhibit A</h3>
+            <p>Rosetta Stone</p>
+            <div class="hover-overlay">
+              <p>Click for detailed explanation</p>
+            </div>
+          </div>
+        </div>
+        <div class="exhibit" data-id="B">
+          <div class="exhibit-content">
+            <h3>Exhibit B</h3>
+            <p>Mona Lisa</p>
+            <div class="hover-overlay">
+              <p>Click for detailed explanation</p>
+            </div>
+          </div>
+        </div>
+        <div class="exhibit" data-id="C">
+          <div class="exhibit-content">
+            <h3>Exhibit C</h3>
+            <p>The Starry Night</p>
+            <div class="hover-overlay">
+              <p>Click for detailed explanation</p>
+            </div>
+          </div>
+        </div>
+        <!-- Cultural Artifacts -->
+        <div class="exhibit" data-id="D">
+          <div class="exhibit-content">
+            <h3>Exhibit D</h3>
+            <p>Tutankhamun's Mask</p>
+            <div class="hover-overlay">
+              <p>Click for detailed explanation</p>
+            </div>
+          </div>
+        </div>
+        <div class="exhibit" data-id="E">
+          <div class="exhibit-content">
+            <h3>Exhibit E</h3>
+            <p>Terracotta Army</p>
+            <div class="hover-overlay">
+              <p>Click for detailed explanation</p>
+            </div>
+          </div>
+        </div>
+        <div class="exhibit" data-id="F">
+          <div class="exhibit-content">
+            <h3>Exhibit F</h3>
+            <p>The Parthenon Marbles</p>
+            <div class="hover-overlay">
+              <p>Click for detailed explanation</p>
+            </div>
+          </div>
+        </div>
+        <!-- Historical Items -->
+        <div class="exhibit" data-id="G">
+          <div class="exhibit-content">
+            <h3>Exhibit G</h3>
+            <p>Dead Sea Scrolls</p>
+            <div class="hover-overlay">
+              <p>Click for detailed explanation</p>
+            </div>
+          </div>
+        </div>
+        <div class="exhibit" data-id="H">
+          <div class="exhibit-content">
+            <h3>Exhibit H</h3>
+            <p>The Crown Jewels</p>
+            <div class="hover-overlay">
+              <p>Click for detailed explanation</p>
+            </div>
+          </div>
+        </div>
+        <div class="exhibit" data-id="I">
+          <div class="exhibit-content">
+            <h3>Exhibit I</h3>
+            <p>Venus de Milo</p>
+            <div class="hover-overlay">
+              <p>Click for detailed explanation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="exhibitModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <div class="modal-body">
+          <div class="exhibit-image">
+            <p>Historical Image Placeholder</p>
+          </div>
+          <p id="modalDescription"></p>
+          <div class="exhibit-details">
+            <p id="modalDate"></p>
+            <p id="modalLocation"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

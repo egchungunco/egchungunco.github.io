@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Crimson Text", serif;
+  background-color: #f5f5f0;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #2c2c2c;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  font-family: "Playfair Display", serif;
+  border-bottom: 2px solid #8b7355;
+  padding-bottom: 1rem;
+}
+
+.museum-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.exhibit {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid #e0e0e0;
+}
+
+.exhibit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.exhibit-content {
+  padding: 2rem;
+  height: 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f7);
+}
+
+.exhibit h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #2c2c2c;
+  font-family: "Playfair Display", serif;
+}
+
+.exhibit p {
+  color: #666;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.hover-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(44, 44, 44, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+.hover-overlay p {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.exhibit:hover .hover-overlay {
+  opacity: 1;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  max-width: 42rem;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.close-button:hover {
+  color: #1a1a1a;
+}
+
+.modal h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #1a1a1a;
+  font-family: "Playfair Display", serif;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.exhibit-image {
+  background-color: #f3f4f6;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e0e0e0;
+}
+
+.exhibit-image p {
+  color: #666;
+  font-style: italic;
+}
+
+.modal-body p {
+  margin-bottom: 1.5rem;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+.exhibit-details {
+  background-color: #f9f9f7;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e0e0e0;
+}
+
+.exhibit-details p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.modal-footer {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .museum-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-content {
+    padding: 2rem;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .museum-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+}
